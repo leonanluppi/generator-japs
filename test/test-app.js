@@ -14,7 +14,7 @@ describe('japs:app', function () {
         someOption: true
       })
       .on('end', done);
-  });
+  });   
 
   /*it('creates files', function () {
     assert.file([
