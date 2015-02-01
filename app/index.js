@@ -1,9 +1,9 @@
 'use strict';
-var util = require('util');
-var path = require('path');
-var yeoman = require('yeoman-generator');
-var chalk = require('chalk');
-var yosay = require('yosay');
+var util = require('util'),
+    path = require('path'),
+    yeoman = require('yeoman-generator'),
+    chalk = require('chalk'),
+    yosay = require('yosay');
 
 var JapsGenerator = module.exports = function JapsGenerator(args, options, config) {
     yeoman.generators.Base.apply(this, arguments);
@@ -48,7 +48,7 @@ JapsGenerator.prototype.askFor = function askFor() {
         },
 
         {
-            type 'list',
+            type: 'list',
             name: 'storage',
             message: '(4/5) What is your application storage?',
             choices: [
@@ -109,7 +109,7 @@ JapsGenerator.prototype.app = function app() {
 
     /* Create a simple java project structure */
     var javaDir = 'src/main/java/' + packageFolder + '/',
-        META_INFDir = 'src/main/META-INF/',
+        META_INFDir = 'src/main/java/META-INF/',
         resourceDir = 'src/main/resources/',
         resourceMETA_INFDir = resourceDir + 'META-INF/',
         javaTestDir = 'src/test/java/' + packageFolderTest + '/',
