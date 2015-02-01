@@ -10,11 +10,8 @@ repositories {
 }
 
 dependencies {
-    <% if (storage === 'postgres') { %>
-        <%= compile 'postgresql:postgresql:9.1-901-1.jdbc4' %>
-    } %>
-
     compile 'org.hibernate:hibernate-entitymanager:4.3.7.Final'
+    compile 'postgresql:postgresql:9.1-901-1.jdbc4'
     compile 'com.google.code.gson:gson:2.3.1'
     compile 'org.slf4j:slf4j-api:1.7.10'
 

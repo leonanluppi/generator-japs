@@ -149,20 +149,20 @@ JapsGenerator.prototype.app = function app() {
 
     this.template('src/resources/META-INF/_beans.xml', resourceMETA_INFDir + 'beans.xml');
 
-    this.template('src/main/java/package/_App.java', javaDir + 'App.java');
+    this.template('src/main/package/_App.java', javaDir + 'App.java');
 
-    this.template('src/main/java/package/repository/_Repository.java', repositoryDir + 'Repository.java');
+    this.template('src/main/package/repository/_Repository.java', repositoryDir + 'Repository.java');
 
-    this.template('src/main/java/package/utils/_RestfulException.java', utilsExceptionsDir + 'RestfulException.java');
-    this.template('src/main/java/package/utils/_ResourceNotFoundException.java', utilsExceptionsDir + 'ResourceNotFoundException.java');
+    this.template('src/main/package/utils/_RestfulException.java', utilsExceptionsDir + 'RestfulException.java');
+    this.template('src/main/package/utils/_ResourceNotFoundException.java', utilsExceptionsDir + 'ResourceNotFoundException.java');
 
-    this.template('src/main/java/package/cdi/producer/_LoggerProducer.java', utilsCdiProducerDir + 'LoggerProducer.java');
-    this.template('src/main/java/package/cdi/producer/_EntityProducer.java', utilsCdiProducerDir + 'EntityProducer.java');
+    this.template('src/main/package/cdi/producer/_LoggerProducer.java', utilsCdiProducerDir + 'LoggerProducer.java');
+    this.template('src/main/package/cdi/producer/_EntityProducer.java', utilsCdiProducerDir + 'EntityProducer.java');
 
-    this.template('src/main/java/package/api/_HelloApi.java', apiDir + 'HelloApi.java');
-    this.template('src/main/java/package/service/_HelloService.java', serviceDir + 'HelloService.java');
+    this.template('src/main/package/api/_HelloApi.java', apiDir + 'HelloApi.java');
+    this.template('src/main/package/service/_HelloService.java', serviceDir + 'HelloService.java');
 
     if(this.storage === 'postgres') {
-        this.template('src/main/java/package/META-INF/_persistence.xml', META_INFDir + 'persistence.xml');
+        this.template('src/main/package/META-INF/_persistence.xml', META_INFDir + 'persistence.xml');
     }
 };
