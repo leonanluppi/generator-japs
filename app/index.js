@@ -215,6 +215,7 @@ JapsGenerator.prototype.app = function app() {
         assetsJavascrptDir = assetsDir + 'javascript/',
         gruntDir = sourceDir + 'grunt/',
         templatesDir = sourceDir + 'templates/',
+        templatesIncludesJadeDir = templatesDir + 'includes/jade',
         appDir = sourceDir + 'app/';
 
     var appWelcomeDir = appDir + 'welcome/',
@@ -228,6 +229,7 @@ JapsGenerator.prototype.app = function app() {
     this.mkdir(assetsJavascrptDir);
     this.mkdir(gruntDir);
     this.mkdir(templatesDir);
+    this.mkdir(templatesIncludesJadeDir);
     this.mkdir(templateWelcomeDir);
     this.mkdir(appDir);
     this.mkdir(appWelcomeDir);
@@ -238,6 +240,9 @@ JapsGenerator.prototype.app = function app() {
     this.template(webAppDir + '_package.json', webAppDir + 'package.json');
 
     this.template(sourceDir + '_index.jade', sourceDir + 'index.jade');
+
+    this.template(templatesIncludesJadeDir + '_head.jade', templatesIncludesJadeDir + 'head.jade');
+    this.template(templatesIncludesJadeDir + '_footer.jade', templatesIncludesJadeDir + 'footer.jade');
 
     this.template(gruntDir + '_aliases.yaml', gruntDir + 'aliases.yaml');
     this.template(gruntDir + '_autoprefixer.js', gruntDir + 'autoprefixer.js');
