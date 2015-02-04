@@ -212,8 +212,8 @@ JapsGenerator.prototype.app = function app() {
         assetsStyleDir = assetsDir + 'stylesheet/',
         assetsImageDir = assetsDir + 'image/',
         assetsJavascrptDir = assetsDir + 'javascript/',
-        gruntDir = source + 'grunt/',
-        templatesDir = source + 'templates/',
+        gruntDir = sourceDir + 'grunt/',
+        templatesDir = sourceDir + 'templates/',
         appDir = sourceDir + 'app/';
 
     var appWelcomeDir = appDir + 'welcome/',
