@@ -207,7 +207,7 @@ JapsGenerator.prototype.app = function app() {
     }
 
     /* Webapp angularJS */
-    var sourceDir = 'src/main/' + projectNameUI + '/',
+    var sourceDir = 'src/main/' + this.projectNameUI + '/',
         assetsDir = sourceDir + 'assets/',
         assetsStyleDir = assetsDir + 'stylesheet/',
         assetsImageDir = assetsDir + 'image/',

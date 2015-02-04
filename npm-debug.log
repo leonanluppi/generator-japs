@@ -1,20 +1,21 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'cache', 'clean' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'link' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.35
-4 error Error: EACCES, unlink '/Users/leonanluppi/.npm/grunt-cli/0.1.13'
-4 error  { [Error: EACCES, unlink '/Users/leonanluppi/.npm/grunt-cli/0.1.13']
-4 error   errno: 3,
-4 error   code: 'EACCES',
-4 error   path: '/Users/leonanluppi/.npm/grunt-cli/0.1.13' }
-5 error Please try running this command again as root/Administrator.
-6 error System Darwin 14.0.0
-7 error command "node" "/usr/local/bin/npm" "cache" "clean"
-8 error cwd /Users/leonanluppi/Documents/_Dev/Projetos/generator-japs
-9 error node -v v0.10.35
-10 error npm -v 1.4.28
-11 error path /Users/leonanluppi/.npm/grunt-cli/0.1.13
-12 error code EACCES
-13 error errno 3
-14 error stack Error: EACCES, unlink '/Users/leonanluppi/.npm/grunt-cli/0.1.13'
-15 verbose exit [ 3, true ]
+4 verbose linkPkg /Users/leonanluppi/Documents/_Dev/Projetos/generator-japs
+5 error Error: EACCES, unlink '/usr/local/lib/node_modules/generator-japs'
+5 error  { [Error: EACCES, unlink '/usr/local/lib/node_modules/generator-japs']
+5 error   errno: 3,
+5 error   code: 'EACCES',
+5 error   path: '/usr/local/lib/node_modules/generator-japs' }
+6 error Please try running this command again as root/Administrator.
+7 error System Darwin 14.1.0
+8 error command "node" "/usr/local/bin/npm" "link"
+9 error cwd /Users/leonanluppi/Documents/_Dev/Projetos/generator-japs
+10 error node -v v0.10.35
+11 error npm -v 1.4.28
+12 error path /usr/local/lib/node_modules/generator-japs
+13 error code EACCES
+14 error errno 3
+15 error stack Error: EACCES, unlink '/usr/local/lib/node_modules/generator-japs'
+16 verbose exit [ 3, true ]
