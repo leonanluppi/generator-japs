@@ -239,7 +239,7 @@ JapsGenerator.prototype.app = function app() {
 
     this.template(sourceDir + '_index.jade', sourceDir + 'index.jade');
 
-    this.template(gruntDir + '_aliases.yaml', gruntDir + '_aliases.yaml');
+    this.template(gruntDir + '_aliases.yaml', gruntDir + 'aliases.yaml');
     this.template(gruntDir + '_autoprefixer.js', gruntDir + 'autoprefixer.js');
     this.template(gruntDir + '_clean.js', gruntDir + 'clean.js');
     this.template(gruntDir + '_concat.js', gruntDir + 'concat.js');

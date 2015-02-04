@@ -1,6 +1,6 @@
 {
     "name": "<%= projectNameUI %>",
-    "description": "<%= keywordsUI %>",
+    "description": "A project Scafolding provide by Japs generator by Win Team",
     "version": "0.0.0",
     "author": "<%= authorUI %>",
     "dependencies": {},
