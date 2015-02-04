@@ -1,0 +1,14 @@
+dev:
+- "jade:development"
+- "less:development"
+- "copy"
+- "concat"
+- "connect"
+- "watch"
+
+prod:
+- "jade:production"
+- "less:production"
+- "uglify"
+- "clean"
+- "copy"

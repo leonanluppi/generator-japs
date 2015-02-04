@@ -13,11 +13,10 @@ public class EntityProducer {
     @Produces
     @PersistenceContext
     public EntityManager getEntityManager() {
-        return Persistence.createEntityManagerFactory("'" + <%= persistenceName %> + "'").createEntityManager();
+        return Persistence.createEntityManagerFactory("<%= persistenceName %>").createEntityManager();
     }
 
     public void closeEntityManager(@Disposes EntityManager em) {
         em.close();
     }
 }
-   
