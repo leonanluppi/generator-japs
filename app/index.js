@@ -207,7 +207,8 @@ JapsGenerator.prototype.app = function app() {
     }
 
     /* Webapp angularJS */
-    var sourceDir = 'src/main/' + this.projectNameUI + '/',
+    var webAppDir = 'src/main/webapp/',
+        sourceDir = webappDir + 'source/',
         assetsDir = sourceDir + 'assets/',
         assetsStyleDir = assetsDir + 'stylesheet/',
         assetsImageDir = assetsDir + 'image/',
@@ -219,6 +220,7 @@ JapsGenerator.prototype.app = function app() {
     var appWelcomeDir = appDir + 'welcome/',
         templateWelcomeDir = templatesDir + 'welcome/';
 
+    this.mkdir(webAppDir);
     this.mkdir(sourceDir);
     this.mkdir(assetsDir);
     this.mkdir(assetsStyleDir);
@@ -230,10 +232,11 @@ JapsGenerator.prototype.app = function app() {
     this.mkdir(appDir);
     this.mkdir(appWelcomeDir);
 
-    this.template(sourceDir + '_Gruntfile.js', sourceDir + 'Gruntfile.js');
-    this.template(sourceDir + '_.bowerrc', sourceDir + '.bowerrc');
-    this.template(sourceDir + '_bower.json', sourceDir + 'bower.json');
-    this.template(sourceDir + '_package.json', sourceDir + 'package.json');
+    this.template(webAppDir + '_Gruntfile.js', webAppDir + 'Gruntfile.js');
+    this.template(webAppDir + '_.bowerrc', webAppDir + '.bowerrc');
+    this.template(webAppDir + '_bower.json', webAppDir + 'bower.json');
+    this.template(webAppDir + '_package.json', webAppDir + 'package.json');
+    
     this.template(sourceDir + '_index.jade', sourceDir + 'index.jade');
 
     this.template(gruntDir + '_aliases.yaml', gruntDir + '_aliases.yaml');
