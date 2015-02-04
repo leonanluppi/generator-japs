@@ -256,9 +256,9 @@ JapsGenerator.prototype.app = function app() {
 
     this.template(assetsImageDir + '_profile.png', assetsImageDir + 'profile.png');
 
-    this.template(templateWelcomeDir + '_welcome.jade', templateWelcomeDir + 'welcome.jade')
+    this.template(templateWelcomeDir + '_welcome.jade', templateWelcomeDir + 'welcome.jade');
 
-    this.template(appDir + '_app.js', appDir + 'app.js')
-    this.template(appWelcomeDir + '_welcome.module.js', appWelcomeDir + 'welcome.module.js')
-    this.template(appWelcomeDir + '_welcome.route.js', appWelcomeDir + 'welcome.route.js')
+    this.template(appDir + '_app.js', appDir + 'app.js');
+    this.template(appWelcomeDir + '_welcome.module.js', appWelcomeDir + 'welcome.module.js');
+    this.template(appWelcomeDir + '_welcome.route.js', appWelcomeDir + 'welcome.route.js');
 };
