@@ -215,7 +215,7 @@ JapsGenerator.prototype.app = function app() {
         assetsJavascrptDir = assetsDir + 'javascript/',
         gruntDir = sourceDir + 'grunt/',
         templatesDir = sourceDir + 'templates/',
-        templatesIncludesJadeDir = templatesDir + 'includes/jade',
+        templatesIncludesJadeDir = templatesDir + 'includes/jade/',
         appDir = sourceDir + 'app/';
 
     var appWelcomeDir = appDir + 'welcome/',
