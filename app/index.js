@@ -208,7 +208,7 @@ JapsGenerator.prototype.app = function app() {
 
     /* Webapp angularJS */
     var webAppDir = 'src/main/webapp/',
-        sourceDir = webappDir + 'source/',
+        sourceDir = webAppDir + 'source/',
         assetsDir = sourceDir + 'assets/',
         assetsStyleDir = assetsDir + 'stylesheet/',
         assetsImageDir = assetsDir + 'image/',
@@ -236,7 +236,7 @@ JapsGenerator.prototype.app = function app() {
     this.template(webAppDir + '_.bowerrc', webAppDir + '.bowerrc');
     this.template(webAppDir + '_bower.json', webAppDir + 'bower.json');
     this.template(webAppDir + '_package.json', webAppDir + 'package.json');
-    
+
     this.template(sourceDir + '_index.jade', sourceDir + 'index.jade');
 
     this.template(gruntDir + '_aliases.yaml', gruntDir + '_aliases.yaml');
