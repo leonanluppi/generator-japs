@@ -108,7 +108,7 @@ JapsGenerator.prototype.askFor = function askFor() {
             type: 'input',
             name: 'keywordsUI',
             message: 'What is your keywords for this project?',
-            default: 'JAX-RS, AngularJS, PostgreSQL'
+            default: '"JAX-RS", "AngularJS", "PostgreSQL"'
         },
 
         {
