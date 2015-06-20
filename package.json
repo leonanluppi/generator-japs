@@ -1,6 +1,6 @@
 {
   "name": "generator-japs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Yeoman generator - Create project using Java (JAX-RS), AngularJS and PostgreSQL",
   "license": "MIT",
   "main": "app/index.js",
