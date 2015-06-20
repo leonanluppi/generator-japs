@@ -3,7 +3,9 @@ var util = require('util'),
     path = require('path'),
     yeoman = require('yeoman-generator'),
     chalk = require('chalk'),
-    yosay = require('yosay');
+    yosay = require('yosay'),
+    packagejs = require(__dirname + '/../package.json'),
+    mkdirp = require('mkdirp');
 
 var JapsGenerator = module.exports = function JapsGenerator(args, options, config) {
     yeoman.generators.Base.apply(this, arguments);
@@ -20,14 +22,19 @@ util.inherits(JapsGenerator, yeoman.generators.Base);
 JapsGenerator.prototype.askFor = function askFor() {
     var done = this.async();
 
-    console.log('\n');
-    console.log('############# Welcome to Japs generator! ###############');
-    console.log('# A boilerplate to begin a java project jax-rs based   #');
-    console.log('# with gradle and postgresql, fast and to simple       #');
-    console.log('########## ' + chalk.red('Win soluções. Allright\'s reserverd.') + '##########');
+    console.log(chalk.red('\n' +
+    '
+           _____    ____  _____    _____________   ____________  ___  __________  ____ 
+          / /   |  / __ \/ ___/   / ____/ ____/ | / / ____/ __ \/   |/_  __/ __ \/ __ \
+     __  / / /| | / /_/ /\__ \   / / __/ __/ /  |/ / __/ / /_/ / /| | / / / / / / /_/ /
+    / /_/ / ___ |/ ____/___/ /  / /_/ / /___/ /|  / /___/ _, _/ ___ |/ / / /_/ / _, _/ 
+    \____/_/  |_/_/    /____/   \____/_____/_/ |_/_____/_/ |_/_/  |_/_/  \____/_/ |_|  
+                                                                                        ');
+    console.log('Welcome to Japs Generator version: ' + packagejs.version);
+    console.log('' + chalk.red('Japs Generator. Allright\'s reserverd.'));
     console.log('\n');
 
-    console.log("Okay, Let's I make some questions to help me create your project...");
+    console.log("Okay, Let's I make some questions to help create your project...");
 
     console.log('\n');
 
@@ -167,23 +174,23 @@ JapsGenerator.prototype.app = function app() {
     utilsCdiProducerDir = utilsCdiDir + 'producer/',
     utilsExceptionsDir = utilsDir + 'exception/';
 
-    this.mkdir(javaDir);
-    this.mkdir(META_INFDir);
-    this.mkdir(resourceDir);
-    this.mkdir(resourceMETA_INFDir);
-    this.mkdir(javaTestDir);
-    this.mkdir(resourceTestDir);
+    mkdirp(javaDir);
+    mkdirp(META_INFDir);
+    mkdirp(resourceDir);
+    mkdirp(resourceMETA_INFDir);
+    mkdirp(javaTestDir);
+    mkdirp(resourceTestDir);
 
-    this.mkdir(entityDir);
-    this.mkdir(repositoryDir);
-    this.mkdir(apiDir);
-    this.mkdir(serviceDir);
-    this.mkdir(utilsDir);
-    this.mkdir(utilsAnnotationsDir);
-    this.mkdir(utilsCdiDir);
-    this.mkdir(utilsCdiInterceptorDir);
-    this.mkdir(utilsCdiProducerDir);
-    this.mkdir(utilsExceptionsDir);
+    mkdirp(entityDir);
+    mkdirp(repositoryDir);
+    mkdirp(apiDir);
+    mkdirp(serviceDir);
+    mkdirp(utilsDir);
+    mkdirp(utilsAnnotationsDir);
+    mkdirp(utilsCdiDir);
+    mkdirp(utilsCdiInterceptorDir);
+    mkdirp(utilsCdiProducerDir);
+    mkdirp(utilsExceptionsDir);
 
     this.template('_build.gradle', 'build.gradle');
 
@@ -221,18 +228,18 @@ JapsGenerator.prototype.app = function app() {
     var appWelcomeDir = appDir + 'welcome/',
         templateWelcomeDir = templatesDir + 'welcome/';
 
-    this.mkdir(webAppDir);
-    this.mkdir(sourceDir);
-    this.mkdir(assetsDir);
-    this.mkdir(assetsStyleDir);
-    this.mkdir(assetsImageDir);
-    this.mkdir(assetsJavascrptDir);
-    this.mkdir(gruntDir);
-    this.mkdir(templatesDir);
-    this.mkdir(templatesIncludesJadeDir);
-    this.mkdir(templateWelcomeDir);
-    this.mkdir(appDir);
-    this.mkdir(appWelcomeDir);
+    mkdirp(webAppDir);
+    mkdirp(sourceDir);
+    mkdirp(assetsDir);
+    mkdirp(assetsStyleDir);
+    mkdirp(assetsImageDir);
+    mkdirp(assetsJavascrptDir);
+    mkdirp(gruntDir);
+    mkdirp(templatesDir);
+    mkdirp(templatesIncludesJadeDir);
+    mkdirp(templateWelcomeDir);
+    mkdirp(appDir);
+    mkdirp(appWelcomeDir);
 
     this.template(webAppDir + '_Gruntfile.js', webAppDir + 'Gruntfile.js');
     this.template(webAppDir + '_.bowerrc', webAppDir + '.bowerrc');
