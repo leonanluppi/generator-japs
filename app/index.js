@@ -22,16 +22,7 @@ util.inherits(JapsGenerator, yeoman.generators.Base);
 JapsGenerator.prototype.askFor = function askFor() {
     var done = this.async();
 
-    console.log(chalk.red('\n' +
-    '
-           _____    ____  _____    _____________   ____________  ___  __________  ____ 
-          / /   |  / __ \/ ___/   / ____/ ____/ | / / ____/ __ \/   |/_  __/ __ \/ __ \
-     __  / / /| | / /_/ /\__ \   / / __/ __/ /  |/ / __/ / /_/ / /| | / / / / / / /_/ /
-    / /_/ / ___ |/ ____/___/ /  / /_/ / /___/ /|  / /___/ _, _/ ___ |/ / / /_/ / _, _/ 
-    \____/_/  |_/_/    /____/   \____/_____/_/ |_/_____/_/ |_/_/  |_/_/  \____/_/ |_|  
-                                                                                        ');
-    console.log('Welcome to Japs Generator version: ' + packagejs.version);
-    console.log('' + chalk.red('Japs Generator. Allright\'s reserverd.'));
+    console.log('Welcome to ' + chalk.red('Japs Generator') +  ' version: ' + packagejs.version);
     console.log('\n');
 
     console.log("Okay, Let's I make some questions to help create your project...");
@@ -56,74 +47,20 @@ JapsGenerator.prototype.askFor = function askFor() {
         {
             type: 'input',
             name: 'restService',
-            message: '(3/5) What is your application path (REST URL Service)?',
+            message: '(3/4) What is your application path (REST URL Service)?',
             default: 'api'
         },
 
         {
             type: 'list',
             name: 'storage',
-            message: '(4/5) What is your application storage?',
+            message: '(4/4) What is your application storage?',
             choices: [
             {
                 value: 'postgres',
                 name: 'PostgreSQL',
             }
             ]
-        },
-
-        {
-            when: 'storage.postgres',
-            type: 'input',
-            name: 'persistenceName',
-            message: 'What is your persistence unit name?'
-        },
-
-        {
-            when: 'storage.postgres',
-            type: 'list',
-            name: 'transactionType',
-            message: 'What is your transaction type?',
-            choices: ['JTA', 'RESOURCE_LOCAL']
-        },
-
-        {
-            type: 'confirm',
-            name: 'ui',
-            message: '(5/5) Would you like to generate AngularJS webapp UI?',
-            default: true
-        },
-
-        {
-            when: 'ui.true',
-            type: 'input',
-            name: 'projectNameUI',
-            message: 'What is your project name?',
-            default: 'japsUI'
-        },
-
-        {
-            when: 'ui.true',
-            type: 'input',
-            name: 'authorUI',
-            message: 'What is your author name?',
-            default: 'Win'
-        },
-
-        {
-            when: 'ui.true',
-            type: 'input',
-            name: 'keywordsUI',
-            message: 'What is your keywords for this project?',
-            default: '"JAX-RS", "AngularJS", "PostgreSQL"'
-        },
-
-        {
-            when: 'ui.true',
-            type: 'confirm',
-            name: 'publicOrPrivateUI',
-            message: 'This is a private project ?',
-            default: true
         }
     ];
 
@@ -134,11 +71,6 @@ JapsGenerator.prototype.askFor = function askFor() {
         this.storage = props.storage;
         this.persistenceName = props.persistenceName;
         this.transactionType = props.transactionType;
-        this.ui = props.ui;
-        this.projectNameUI = props.projectNameUI;
-        this.authorUI = props.authorUI;
-        this.keywordsUI = props.keywordsUI;
-        this.publicOrPrivateUI = props.publicOrPrivateUI;
         done();
     }.bind(this));
 

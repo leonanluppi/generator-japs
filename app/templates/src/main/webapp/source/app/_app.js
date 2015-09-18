@@ -1,15 +1,15 @@
 'use strict';
 
 (function(){
-    angular.module("<%= projectNameUI %>", [
+    angular.module("<%= projectName %>", [
         /* Angular Modules */
         "ngRoute",
         "ngResource",
         "ngAnimate",
         "ngStorage",
 
-        "<%= projectNameUI %>.Welcome",
-        
+        "<%= projectName %>.Welcome",
+
         /* 3rd Modules */
         "highcharts-ng"
     ]);

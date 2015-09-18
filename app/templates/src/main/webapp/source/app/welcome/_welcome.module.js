@@ -1,1 +1,1 @@
-angular.module("<%= projectNameUI %>.Welcome", []);
+angular.module("<%= projectName %>.Welcome", []);

@@ -1,19 +1,16 @@
 {
-    "name": "<%= projectNameUI %>",
+    "name": "<%= projectName %>",
     "version": "0.0.0",
-    "description": "<%= projectNameUI %>",
+    "description": "<%= projectName %>",
     "main": "bower",
     "moduleType": [
         "amd"
     ],
     "keywords": [
-        <%= keywordsUI %>
     ],
     "authors": [
-        "<%= authorUI %>"
     ],
     "license": "MIT",
-    "private": <%= publicOrPrivateUI %>,
     "ignore": [
         "**/.*",
         "node_modules",

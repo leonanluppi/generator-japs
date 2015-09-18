@@ -1,8 +1,8 @@
 {
-    "name": "<%= projectNameUI %>",
-    "description": "A project Scafolding provide by Japs generator by Win Team",
+    "name": "<%= projectName %>",
+    "description": "A project Scafolding provide by Japs generator",
     "version": "0.0.0",
-    "author": "<%= authorUI %>",
+    "author": "",
     "dependencies": {},
     "devDependencies": {
         "grunt": "0.x.x",
